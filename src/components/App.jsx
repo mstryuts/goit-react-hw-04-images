@@ -36,7 +36,7 @@ const App = () => {
     const fetchData = async (q, page) => {
       try {
         const data = await fetchImages(q, page);
-        console.log(data);
+
         setImages(s => [...s, ...data.hits]);
         setTotalPages(data.total);
       } catch (error) {
